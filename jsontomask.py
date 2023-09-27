@@ -51,14 +51,12 @@ def jsonmaskpng(json_path, mask_path):
 if __name__ == "__main__":
 
     '''
-    mask path as first system argument (should contain train or test folder).
-    output path as second system argument.
-    args*: all the names of folders containing labels folder that holds all the jsons
+    mask path as the first system argument (should contain train or test... folder).
+    output path as the second system argument.
+    args*: all the names of folders containing labels folder that holds all the Jsons.
     '''
 
     for path in sys.argv[3:]:
-        json_path = os.path.join(path, "labels")
-        mask_path = os.path.join(path, "masks")
         print(json_path)
         print(mask_path)
         jsonmaskpng(os.path.join(sys.argv[1], json_path), os.path.join(sys.argv[2], mask_path))
